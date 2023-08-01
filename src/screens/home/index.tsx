@@ -6,7 +6,7 @@ import { style } from './styles';
 export function Home() {
     return (
         <View style={style.container}>
-            <Text>Teste</Text>
+            <Text>Marcelo</Text>
         </View>
     );
 }

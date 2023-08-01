@@ -10,3 +10,4 @@ export const PATH_ACTIVITY = 'activity';
 export const PATH_ACTIVITY_FINISHED = 'activity-finished';
 export const PATH_ABOUTUS = 'aboutUs';
 export const PATH_PRIVACYPOLICY = 'privacyPolicy';
+export const PATH_REVIEW = 'review';

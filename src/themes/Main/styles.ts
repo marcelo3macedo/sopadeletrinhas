@@ -1,13 +1,11 @@
-import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
-export const style = StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-    content: {
-        flex: 1,
-    },
-    footer: {
-        height: 70,
-    },
-});
+export const Container = styled.View`
+  flex: 1;
+`;
+
+export const Content = styled.View`
+  flex: 1;
+  paddingTop: 25px;
+`;
+

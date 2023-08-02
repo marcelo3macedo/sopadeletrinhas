@@ -1,5 +1,25 @@
 {
     "translation": {
-        
+        "config": {
+            "title": "Configurações",
+            "subTitle": "Personalizações gerais sobre o sistema",
+            "notifications": "Notificações",
+            "soundEffects": "Efeitos Sonoros",
+            "fontSize": "Tamanho da Fonte",
+            "accessibility": "Acessibilidade"
+        },
+        "font": {
+            "normal": "Padrão",
+            "big": "Grande"
+        },
+        "modal": {
+            "edit": "Edição",
+            "add": "Adicionar",
+            "remove": "Remover",
+            "cardEdit": "Edição Card",
+            "optionYes": "Sim",
+            "optionNo": "Não",
+            "fontSize": "Tamanho da Fonte"
+        }
     }
 }

@@ -1,18 +1,28 @@
-import { theme } from '@styles/index.style';
-import { StyleSheet } from 'react-native';
+import { styled } from 'styled-components/native';
 
-export const style = StyleSheet.create({
-    container: {
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'row',
-        backgroundColor: theme.GRAY_COLOR,
-        borderRadius: 10,
-    },
-    textArea: {
-        paddingHorizontal: 10,
-    },
-});
+export const Container = styled.View<any>`
+  ${({ theme, styleName }:any) => {
+    if (styleName) {
+      return `
+        paddingHorizontal: 20px;
+        paddingVertical: 10px;
+        display: flex;
+        alignItems: center;
+        justifyContent: center;
+        backgroundColor: ${theme.GRAY_COLOR};
+        borderRadius: 5px;
+      `;
+    }
+
+    return `
+        paddingHorizontal: 40px;
+        paddingVertical: 15px;
+        display: flex;
+        alignItems: center;
+        justifyContent: center;
+        backgroundColor: ${theme.GRAY_COLOR};
+        borderRadius: 5px;
+    `;
+  }}
+`;
+

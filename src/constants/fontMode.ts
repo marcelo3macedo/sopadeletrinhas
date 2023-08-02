@@ -1,0 +1,1 @@
+export const FONTMODE_NORMAL = 'normal';

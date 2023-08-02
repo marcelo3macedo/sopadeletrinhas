@@ -9,6 +9,7 @@ import ButterflyBlack from '@assets/animals/borboleta_black.png';
 import Rabbit from '@assets/animals/coelho.png';
 import RabbitBlack from '@assets/animals/coelho_black.png';
 
+import WordDragAndDrop from '@components/dragDrop/word';
 import { View } from 'react-native';
 import { style } from './styles';
 
@@ -22,6 +23,7 @@ export function Review() {
 
     return (
         <View style={style.container}>
+            <WordDragAndDrop />
         </View>
     )
 }

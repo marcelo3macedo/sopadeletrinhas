@@ -13,7 +13,7 @@ export function MainScreens() {
     return (
         <MainTheme>
             <Navigator
-                initialRouteName={PATH_REVIEW}
+                initialRouteName={PATH_HOME}
                 screenOptions={styles.drawerScreenOptions}>
                 <Screen name={PATH_HOME} component={Home} />
                 <Screen name={PATH_REVIEW} component={Review} />

@@ -6,15 +6,15 @@ export const Text = styled.Text<any>`
     if (styledName === Styles.DarkH3) {
       return `
         fontSize: ${theme.FONT_SIZE_MEDIUM};
-        fontFamily: ${theme.FONT_FAMILY_BOLD};
-        color: ${theme.TITLE_COLOR};
+        fontFamily: ${theme.FONT_FAMILY};
+        color: ${theme.PRIMARY_COLOR};
       `;
     }
 
     return `
       fontSize: ${theme.FONT_SIZE_SMALL};
-      fontFamily: ${theme.FONT_FAMILY_BOLD};
-      color: ${theme.TITLE_COLOR};
+      fontFamily: ${theme.FONT_FAMILY};
+      color: ${theme.PRIMARY_COLOR};
     `;
   }}
 `;

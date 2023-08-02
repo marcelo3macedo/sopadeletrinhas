@@ -1,4 +1,5 @@
 export const PATH_HOME = 'home';
+export const PATH_CONFIG = 'config';
 export const PATH_ANIMALS = 'animals';
 export const PATH_LOGIN = 'login';
 export const PATH_SIGNUP = 'signup';

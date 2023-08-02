@@ -16,4 +16,10 @@ export const theme: DefaultTheme = {
     PALLETE04_COLOR: '#db1f48',
     GRAY_COLOR: '#dfe0e2',
     OVERBACKGROUND_COLOR: '#4a4a4a',
+    GREEN_COLOR: '#21B3AF',
+    GREEN_COLOR_DARK: '#177472',
+    YELLOW_COLOR: '#FFE47E',
+    YELLOW_COLOR_DARK: '#BEAC68',
+    RED_COLOR: '#FF5757',
+    RED_COLOR_DARK: '#DB1F48',
 };

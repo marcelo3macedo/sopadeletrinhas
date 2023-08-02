@@ -8,27 +8,27 @@ export const Text = styled.Text<any>`
         return `
           fontFamily: ${theme.FONT_FAMILY};
           fontSize: ${theme.FONT_SIZE_VENTI};
-          color: ${theme.PRIMARY_COLOR};
+          color: ${theme.LIGHT_COLOR};
         `;
       case Styles.HugeCentered:
         return `
           fontFamily: ${theme.FONT_FAMILY};
           fontSize: ${theme.FONT_SIZE_VENTI};
-          color: ${theme.PRIMARY_COLOR};
+          color: ${theme.LIGHT_COLOR};
           textAlign: center;
         `;
       case Styles.LargeCentered:
         return `
           fontFamily: ${theme.FONT_FAMILY};
           fontSize: ${theme.FONT_SIZE_LARGE};
-          color: ${theme.PRIMARY_COLOR};
+          color: ${theme.LIGHT_COLOR};
           textAlign: center;
         `;
       default:
         return `
         fontFamily: ${theme.FONT_FAMILY};
         fontSize: ${theme.FONT_SIZE_LARGE};
-        color: ${theme.PRIMARY_COLOR};
+        color: ${theme.LIGHT_COLOR};
       `;
     }
   }}

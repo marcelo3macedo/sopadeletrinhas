@@ -1,12 +1,24 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, { useState } from 'react';
 
-import { style } from './styles';
+import { NewAdventure } from '@components/adventure/new';
+import { DifficultyModal } from '@components/modals/difficulty';
+import { Container } from './styles';
 
 export function Home() {
+    const [ modal, setModal ] = useState(false);
+
+    function initAction() {
+        setModal(true);
+    }
+
+    function dismissAction() {
+        setModal(false);
+    }
+
     return (
-        <View style={style.container}>
-            <Text>Marcelo</Text>
-        </View>
+        <Container>
+            <NewAdventure initAction={initAction} />
+            <DifficultyModal modal={modal} dismissAction={dismissAction} />
+        </Container>
     );
 }

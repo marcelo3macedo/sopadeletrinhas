@@ -1,4 +1,3 @@
-import { theme } from '@styles/index.style';
 import { StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
@@ -11,12 +10,13 @@ export const style = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: theme.PALLETE01_COLOR,
-        borderBottomColor: theme.DARK_COLOR,
         borderRadius: 60,
         borderBottomWidth: 5,
+        borderLeftWidth: 1,
+        borderRightWidth: 1,
     },
     textArea: {
         paddingTop: 10,
+        paddingBottom: 10,
     },
 });

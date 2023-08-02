@@ -1,5 +1,12 @@
 {
     "translation": {
+        "adventure": {
+            "newTitle": "Comece agora uma nova aventura",
+            "newSubtitle": "A cada aventura completada, um novo animal é resgatado",
+            "rescued": "Você já resgatou",
+            "animals": "animais",
+            "animalsRecued": "animais resgatados"
+        },
         "config": {
             "title": "Configurações",
             "subTitle": "Personalizações gerais sobre o sistema",
@@ -11,6 +18,16 @@
         "font": {
             "normal": "Padrão",
             "big": "Grande"
+        },
+        "actions": {
+            "start": "Iniciar",
+            "exit": "Sair"
+        },
+        "difficulty": {
+            "title": "Dificuldade",
+            "easy": "Fácil",
+            "medium": "Médio",
+            "hard": "Difícil"
         },
         "modal": {
             "edit": "Edição",

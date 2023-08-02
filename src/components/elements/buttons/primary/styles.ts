@@ -1,5 +1,5 @@
-import { theme } from '@styles/index.style';
 import { StyleSheet } from 'react-native';
+import { styled } from 'styled-components/native';
 
 export const style = StyleSheet.create({
     container: {
@@ -8,12 +8,13 @@ export const style = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: theme.PALLETE01_COLOR,
-        borderBottomColor: theme.PALLETE01_COLOR_DARK,
         borderRadius: 60,
-        borderBottomWidth: 10,
-    },
-    textArea: {
-        paddingTop: 10,
+        borderBottomWidth: 5,
+        borderLeftWidth: 1,
+        borderRightWidth: 1,
     },
 });
+
+export const TextArea = styled.View`
+    padding-top: 0px;
+`;

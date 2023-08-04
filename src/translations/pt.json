@@ -41,6 +41,9 @@
         "correctOption": {
             "choose": "Escolha o animal que começa com:"
         },
+        "paintItem": {
+            "choose": "Pinte o seguinte animal:"
+        },
         "activities": {
             "congratsCorrect": "Você acertou! Parabéns!",
             "wrongAnswer": "Que pena, você errou essa pergunta."

@@ -37,6 +37,13 @@
             "optionYes": "Sim",
             "optionNo": "Não",
             "fontSize": "Tamanho da Fonte"
+        },
+        "correctOption": {
+            "choose": "Escolha o animal que começa com:"
+        },
+        "activities": {
+            "congratsCorrect": "Você acertou! Parabéns!",
+            "wrongAnswer": "Que pena, você errou essa pergunta."
         }
     }
 }

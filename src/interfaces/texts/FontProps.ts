@@ -5,6 +5,7 @@ export interface FontProps {
 }
 
 export enum Styles {
+    VentiCentered,
     Huge,
     HugeCentered,
     Large,

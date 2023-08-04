@@ -1,7 +1,5 @@
-import { StyleSheet } from 'react-native';
+import { styled } from 'styled-components/native';
 
-export const style = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-});
+export const Container = styled.View`
+    flex: 1;
+`;

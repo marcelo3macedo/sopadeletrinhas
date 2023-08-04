@@ -4,6 +4,13 @@ import { styled } from 'styled-components/native';
 export const Text = styled.Text<any>`
   ${({ theme, styleName }:any) => {
     switch (styleName) {
+      case Styles.VentiCentered:
+        return `
+          fontFamily: ${theme.FONT_FAMILY};
+          fontSize: ${theme.FONT_SIZE_MAXVENTI};
+          color: ${theme.PRIMARY_COLOR};
+          textAlign: center;
+        `;
       case Styles.Huge:
         return `
           fontFamily: ${theme.FONT_FAMILY};

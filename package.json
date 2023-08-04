@@ -20,6 +20,7 @@
     "formik": "^2.4.2",
     "i18next": "^23.2.11",
     "immer": "^9.0.19",
+    "lottie-react-native": "^6.0.1",
     "moment": "^2.29.4",
     "react": "18.2.0",
     "react-i18next": "^13.0.2",

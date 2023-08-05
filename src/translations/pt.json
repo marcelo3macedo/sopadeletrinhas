@@ -47,6 +47,9 @@
         "activities": {
             "congratsCorrect": "Você acertou! Parabéns!",
             "wrongAnswer": "Que pena, você errou essa pergunta."
+        },
+        "dragNDrop": {
+            "title": "Forme a palavra que corresponde a:"
         }
     }
 }

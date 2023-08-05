@@ -2,17 +2,25 @@ import { ButtonSecondary } from '@components/elements/buttons/secondary';
 import { TitleText } from '@components/elements/texts/title';
 import { getImageFromSlug } from '@helpers/AnimalsHelper';
 import { Styles } from '@interfaces/texts/FontProps';
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Options from '../options';
 import WordArea from '../word';
 import { BackArea, Container, Header, Picture } from './styles';
 
-const DragNDrop = () => {
+const DragNDrop = ({ session }:any) => {
   const { t } = useTranslation();
-  const word = 'pato';
-  const syllables = [] as any;
-  const options = [ 'PA', 'BA', 'SA', 'TO', 'CA', 'DE'];
+  const [ selected, setSelected ] = useState([]) as any;
+  const { slug, syllables, options } = session;
+
+  function selectedSyllable(value: string) {
+    const syllable = syllables[selected.length];
+
+    if (value !== syllable) {return;}
+
+    const newSelected = selected.concat(value);
+    setSelected(newSelected);
+  }
 
   return (
     <Container>
@@ -22,9 +30,9 @@ const DragNDrop = () => {
       <Header>
         <TitleText value={t('dragNDrop.title')} styled={Styles.LargeCentered} />
       </Header>
-      <Picture source={getImageFromSlug(word)} />
-      <WordArea syllables={syllables} />
-      <Options options={options}  />
+      <Picture source={getImageFromSlug(slug)} />
+      <WordArea syllables={selected} />
+      <Options options={options} action={selectedSyllable}  />
     </Container>
 );
 };

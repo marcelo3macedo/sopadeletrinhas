@@ -5,7 +5,7 @@ import React from 'react';
 import Draggable from 'react-native-draggable';
 import { Item, Row, Syllable, Wrapper } from './styles';
 
-const Options = ({ options }:any) => {
+const Options = ({ options, action }:any) => {
   const minDrag = -50;
   const blockSize = options.length > 4 ? 3 : 2;
   const blocks = sliceIntoBlocks(options, blockSize);
@@ -15,7 +15,7 @@ const Options = ({ options }:any) => {
 
     if (dy > minDrag) {return;}
 
-    console.log(value);
+    action(value);
   }
 
   return (

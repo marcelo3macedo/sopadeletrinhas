@@ -6,15 +6,13 @@ import { useTranslation } from 'react-i18next';
 import Options from '../options';
 import { BackArea, Container, Header, WordArea } from './styles';
 
-const CorrectOption = () => {
+const CorrectOption = ({ session }:any) => {
   const { t } = useTranslation();
-  const syllable = 'BA';
-  const options = [
-      { value: 'Pato', image: 'pato' },
-      { value: 'Abelha', image: 'abelha' },
-      { value: 'Baleia', image: 'baleia' },
-      { value: 'Cachorro', image: 'cachorro' },
-  ];
+  const { syllable, options } = session;
+
+  function optionSelected(option:any) {
+    console.log(option);
+  }
 
   return (
     <Container>
@@ -27,7 +25,7 @@ const CorrectOption = () => {
       <WordArea>
         <TitleText value={syllable} styled={Styles.VentiCentered} />
       </WordArea>
-      <Options options={options} />
+      <Options options={options} action={optionSelected} />
     </Container>
 );
 };

@@ -4,9 +4,9 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import { Action, Wrapper } from './styles';
 
-const Options = ({ options }:any) => {
+const Options = ({ options, action }:any) => {
   function selectItem(item:any) {
-    console.log(item);
+    action(item);
   }
 
   return (
@@ -17,7 +17,7 @@ const Options = ({ options }:any) => {
         numColumns={2}
         renderItem={({ item, index }) => (
           <Action key={index}>
-              <AnimalImage source={getImageFromSlug(item.image)} action={() => { selectItem(item); }} />
+              <AnimalImage source={getImageFromSlug(item.image)} action={() => { selectItem(item.value); }} />
           </Action>
         )}
       />

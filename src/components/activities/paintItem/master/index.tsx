@@ -6,15 +6,9 @@ import { useTranslation } from 'react-i18next';
 import Options from '../options';
 import { BackArea, Container, Header, WordArea } from './styles';
 
-const PaintItem = () => {
+const PaintItem = ({ session }:any) => {
   const { t } = useTranslation();
-  const syllable = 'ABELHA';
-  const options = [
-      { animal: 'pato' },
-      { animal: 'abelha' },
-      { animal: 'baleia' },
-      { animal: 'cachorro' },
-  ];
+  const { options, word } = session;
 
   return (
     <Container>
@@ -25,7 +19,7 @@ const PaintItem = () => {
         <TitleText value={t('paintItem.choose')} styled={Styles.LargeCentered} />
       </Header>
       <WordArea>
-        <TitleText value={syllable} styled={Styles.VentiCentered} />
+        <TitleText value={word} styled={Styles.VentiCentered} />
       </WordArea>
       <Options options={options} />
     </Container>

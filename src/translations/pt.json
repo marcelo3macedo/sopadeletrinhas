@@ -46,7 +46,8 @@
         },
         "activities": {
             "congratsCorrect": "Você acertou! Parabéns!",
-            "wrongAnswer": "Que pena, você errou essa pergunta."
+            "wrongAnswer": "Que pena, você errou essa pergunta.",
+            "rightAnswer": "Resposta correta:"
         },
         "dragNDrop": {
             "title": "Forme a palavra que corresponde a:"

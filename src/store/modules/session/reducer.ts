@@ -7,6 +7,7 @@ const INITIAL_STATE = {
             type: SESSIONTYPE_PAINT,
             word: 'ABELHA',
             correctAnswer: 'Abelha',
+            slug: 'abelha',
             options: [
                 { animal: 'pato' },
                 { animal: 'abelha' },
@@ -18,6 +19,7 @@ const INITIAL_STATE = {
             type: SESSIONTYPE_CORRECTANSWER,
             syllable: 'BA',
             correctAnswer: 'Baleia',
+            slug: 'baleia',
             options: [
                 { value: 'Pato', image: 'pato' },
                 { value: 'Abelha', image: 'abelha' },

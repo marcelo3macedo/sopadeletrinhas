@@ -26,8 +26,8 @@ export const Item = styled.View`
 `;
 
 export const Syllable = styled.View`
-  border: 2px solid ${({ theme }) => theme.GRAY_COLOR};
-  background: ${({ theme }) => theme.PALLETE01_COLOR};
+  border: 2px solid ${({ theme }) => theme.PRIMARY_COLOR};
+  background: ${({ theme }) => theme.PALLETE04_COLOR};
   border-radius: 10px;
   padding: 15px 25px 20px 25px;
 `;

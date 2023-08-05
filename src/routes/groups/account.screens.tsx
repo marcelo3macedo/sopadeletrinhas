@@ -11,7 +11,7 @@ export function AccountScreens() {
     return (
         <MainTheme>
             <Navigator screenOptions={styles.drawerScreenOptions}>
-                <Screen name={PATH_CONFIG} component={ConfigScreen} />
+                <Screen name={PATH_CONFIG} component={ConfigScreen} options={styles.screenOptions} />
             </Navigator>
         </MainTheme>
     );

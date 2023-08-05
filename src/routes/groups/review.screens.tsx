@@ -11,7 +11,7 @@ export function ReviewScreens() {
     return (
         <ReviewTheme>
             <Navigator screenOptions={styles.drawerScreenOptions}>
-                <Screen name={PATH_REVIEW} component={Review} />
+                <Screen name={PATH_REVIEW} component={Review} options={styles.screenOptions} />
             </Navigator>
         </ReviewTheme>
     );

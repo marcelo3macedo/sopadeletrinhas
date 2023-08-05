@@ -14,7 +14,7 @@ export function MainScreens() {
             <Navigator
                 initialRouteName={PATH_HOME}
                 screenOptions={styles.drawerScreenOptions}>
-                <Screen name={PATH_HOME} component={Home} />
+                <Screen name={PATH_HOME} component={Home} options={styles.screenOptions} />
             </Navigator>
         </MainTheme>
     );

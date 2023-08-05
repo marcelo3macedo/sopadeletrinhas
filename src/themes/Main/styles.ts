@@ -6,6 +6,7 @@ export const Container = styled.View`
 
 export const Content = styled.View`
   flex: 1;
-  paddingTop: 25px;
+  paddingTop: 24px;
+  background: ${({ theme }) => theme.PALLETE01_COLOR};
 `;
 

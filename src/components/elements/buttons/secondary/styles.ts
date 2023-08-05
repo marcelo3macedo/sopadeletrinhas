@@ -9,7 +9,7 @@ export const Container = styled.View<any>`
         display: flex;
         alignItems: center;
         justifyContent: center;
-        backgroundColor: ${theme.GRAY_COLOR};
+        backgroundColor: ${theme.PALLETE02_COLOR};
         borderRadius: 5px;
       `;
     }
@@ -20,8 +20,8 @@ export const Container = styled.View<any>`
         display: flex;
         alignItems: center;
         justifyContent: center;
-        backgroundColor: ${theme.GRAY_COLOR};
-        borderRadius: 5px;
+        backgroundColor: ${theme.PALLETE02_COLOR};
+        borderRadius: 20px;
     `;
   }}
 `;

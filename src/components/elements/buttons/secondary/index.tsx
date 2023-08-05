@@ -8,7 +8,7 @@ export function ButtonSecondary({ title, action, larger = false }:ButtonPrimaryP
     return (
         <TouchableOpacity onPress={action}>
             <Container styleName={larger}>
-                <InfoText value={title} />
+                <InfoText value={title} theme="light" />
             </Container>
         </TouchableOpacity>
     );

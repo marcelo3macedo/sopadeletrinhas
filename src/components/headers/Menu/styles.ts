@@ -1,19 +1,19 @@
-import { StyleSheet } from 'react-native';
+import { styled } from 'styled-components/native';
 
-export const style = StyleSheet.create({
-    container: {
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-    },
-    header: {
-        paddingBottom: 5,
-    },
-    image: {
-        display: 'flex',
-        alignItems: 'center',
-    },
-});
+export const Container = styled.View`
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: ${({ theme }) => theme.PALLETE02_COLOR};
+`;
+
+export const Header = styled.View`
+    padding-bottom: 5px;
+`;
+
+export const Image = styled.View`
+    display: flex;
+    align-items: center;
+`;

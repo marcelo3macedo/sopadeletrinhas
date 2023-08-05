@@ -3,12 +3,12 @@ import React from 'react';
 import { ItemScratch } from '../item';
 import { Items, Row, Wrapper } from './styles';
 
-const Options = ({ options }:any) => {
+const Options = ({ options, action }:any) => {
   const blockSize = 2;
   const blocks = sliceIntoBlocks(options, blockSize);
 
   function selectItem(item:any) {
-    console.log(item);
+    action(item);
   }
 
   return (

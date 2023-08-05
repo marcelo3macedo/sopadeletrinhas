@@ -1,17 +1,20 @@
 import { ButtonSecondary } from '@components/elements/buttons/secondary';
 import { TitleText } from '@components/elements/texts/title';
 import { Styles } from '@interfaces/texts/FontProps';
+import { selectOptionAction } from '@store/modules/session/actions';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 import Options from '../options';
 import { BackArea, Container, Header, WordArea } from './styles';
 
 const CorrectOption = ({ session }:any) => {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const { syllable, options } = session;
 
   function optionSelected(option:any) {
-    console.log(option);
+    dispatch(selectOptionAction({ option }));
   }
 
   return (

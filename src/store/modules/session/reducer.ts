@@ -4,6 +4,13 @@ import produce from 'immer';
 const INITIAL_STATE = {
     session: [
         {
+            type: SESSIONTYPE_DRAGNDROP,
+            word: 'Pato',
+            slug: 'pato',
+            syllables: [ 'PA', 'TO'],
+            options: [ 'CA', 'PA', 'SA', 'TO'],
+        },
+        {
             type: SESSIONTYPE_PAINT,
             word: 'ABELHA',
             correctAnswer: 'Abelha',
@@ -21,18 +28,11 @@ const INITIAL_STATE = {
             correctAnswer: 'Baleia',
             slug: 'baleia',
             options: [
-                { value: 'Pato', image: 'pato' },
-                { value: 'Abelha', image: 'abelha' },
-                { value: 'Baleia', image: 'baleia' },
-                { value: 'Cachorro', image: 'cachorro' },
+                { value: 'pato', image: 'pato' },
+                { value: 'abelha', image: 'abelha' },
+                { value: 'baleia', image: 'baleia' },
+                { value: 'cachorro', image: 'cachorro' },
             ],
-        },
-        {
-            type: SESSIONTYPE_DRAGNDROP,
-            word: 'Pato',
-            slug: 'pato',
-            syllables: [ 'PA', 'TO'],
-            options: [ 'CA', 'PA', 'SA', 'TO'],
         },
     ],
     activeIndex: 0,
@@ -71,7 +71,7 @@ export default function session(state = INITIAL_STATE, action:any) {
             case '@session/ABORT': {
                 draft.validated = false;
                 draft.isCorrect = false;
-                draft.session = null;
+                draft.session = null as any;
                 draft.correctAnswer = 0;
                 break;
             }

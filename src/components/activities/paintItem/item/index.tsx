@@ -11,8 +11,8 @@ export function ItemScratch({ animal, action = null }:any) {
   const destiny = getImageFromSlug(animal);
 
   function handleScratch(scratchPercentage: number) {
-      if (scratchPercentage > 30) {
-          //action();
+      if (scratchPercentage > 50) {
+          action(animal);
       }
   }
 

@@ -11,7 +11,7 @@ const {Navigator, Screen} = createDrawerNavigator();
 export function Routes() {
   return (
     <Navigator
-      initialRouteName={RouteOptions.activity}
+      initialRouteName={RouteOptions.main}
       screenOptions={styles.drawerScreenOptions}>
       <Screen
         name={RouteOptions.main}

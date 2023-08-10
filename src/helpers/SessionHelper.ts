@@ -1,3 +1,13 @@
+import { typesByDifficulty } from '@config/TypeByDifficulty';
+import { DifficultyProps } from '@interfaces/sessions/DifficultyProps';
+import { getType, getTypeOptions } from './SessionTypeHelper';
+
+function generateNewSession(difficulty:string) {
+    const prop = difficulty.toUpperCase() as keyof typeof DifficultyProps;
+    const numberOfItems = DifficultyProps[prop];
+    return createSession(numberOfItems, difficulty);
+}
+
 function isCorrectAnswer(session:any, index:number, option:string) {
     if (!session || session.length < index) {return false;}
 
@@ -9,7 +19,29 @@ function isCorrectAnswer(session:any, index:number, option:string) {
     return true;
 }
 
+function createSession(value: number, difficulty:string) {
+    const array = [] as any;
+    const configs = getConfig(difficulty);
+
+    Array.from({ length: value }).forEach(async (_) => {
+        const type = getType(configs?.options);
+        const details = getTypeOptions(type, configs, array);
+
+        array.push({
+            type,
+            details,
+        });
+    });
+
+    return array;
+}
+
+function getConfig(difficulty:string) {
+    return typesByDifficulty.find(t => t.difficulty === difficulty);
+}
+
 export {
+    generateNewSession,
     isCorrectAnswer
 };
 

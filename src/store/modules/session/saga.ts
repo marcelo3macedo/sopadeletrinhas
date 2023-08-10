@@ -1,9 +1,12 @@
-import { isCorrectAnswer } from '@helpers/SessionHelper';
+import { generateNewSession, isCorrectAnswer } from '@helpers/SessionHelper';
 import { all, put, select, takeLatest } from 'redux-saga/effects';
-import { nextAction, selectSuccessAction } from './actions';
+import { createActionSuccess, nextAction, selectSuccessAction } from './actions';
 import * as selectors from './selectors';
 
 function* create({ payload }:any) {
+    const { difficulty } = payload;
+    const session = generateNewSession(difficulty);
+    yield put(createActionSuccess({ session }));
 }
 
 function* createSuccess() {

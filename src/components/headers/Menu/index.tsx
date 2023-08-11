@@ -6,20 +6,24 @@ import { HeaderLogoImage } from '@components/elements/images/headerLogo';
 import { Styles } from '@interfaces/images/IconProps';
 import { RouteOptions } from '@interfaces/routes/RoutesOptions';
 import { DrawerActions, useNavigation } from '@react-navigation/native';
-import { PATH_HOME } from '@services/navigation';
+import { PATH_ANIMALS, PATH_HOME } from '@services/navigation';
 import { navigate } from '@services/navigation/root';
 import React from 'react';
-import { View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
-import { Container, Header, Image } from './styles';
+import { RescuedAnimals } from '../RescuedAnimals';
+import { Animals, Container, Header, Image } from './styles';
 
 export function MenuHeader() {
     const navigation = useNavigation();
 
     function goToHome() {
         navigate(RouteOptions.main, { screen: PATH_HOME });
+    }
+
+    function goToAnimals() {
+        navigate(RouteOptions.main, { screen: PATH_ANIMALS });
     }
 
     function openMenu() {
@@ -38,7 +42,9 @@ export function MenuHeader() {
                     <HeaderLogoImage source={LogoIcon} />
                 </TouchableOpacity>
             </Image>
-            <View />
+            <Animals onPress={goToAnimals}>
+                <RescuedAnimals />
+            </Animals>
         </Container>
     );
 }

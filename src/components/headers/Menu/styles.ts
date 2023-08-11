@@ -17,3 +17,6 @@ export const Image = styled.View`
     display: flex;
     align-items: center;
 `;
+export const Animals = styled.TouchableOpacity`
+    padding-bottom: 5px;
+`;

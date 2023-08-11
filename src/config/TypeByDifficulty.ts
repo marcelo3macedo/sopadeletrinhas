@@ -174,7 +174,7 @@ const typesByDifficulty = [
             {
                 word: 'Pássaro',
                 slug: 'passaro',
-                syllables: [ 'PÁ', 'SSA', 'RO'],
+                syllables: [ 'PÁS', 'SA', 'RO'],
             },
             {
                 word: 'Peixe',

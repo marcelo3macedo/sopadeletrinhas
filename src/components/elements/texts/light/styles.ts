@@ -24,6 +24,13 @@ export const Text = styled.Text<any>`
           color: ${theme.LIGHT_COLOR};
           textAlign: center;
         `;
+      case Styles.Small:
+        return `
+          fontFamily: ${theme.FONT_FAMILY};
+          fontSize: ${theme.FONT_SIZE_SMALL};
+          color: ${theme.LIGHT_COLOR};
+          textAlign: center;
+        `;
       default:
         return `
         fontFamily: ${theme.FONT_FAMILY};

@@ -1,4 +1,5 @@
 function getRandomValue(value: number) {
+    if (value === 0) {return 0;}
     return Math.floor(Math.random() * value) + 1;
 }
 
@@ -11,6 +12,6 @@ function getRandomFromArray(operators:any) {
 }
 
 export {
-    getRandomValue,
-    getRandomFromArray,
+    getRandomFromArray, getRandomValue
 };
+

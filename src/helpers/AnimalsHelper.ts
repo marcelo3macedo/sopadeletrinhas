@@ -34,8 +34,12 @@ import flor from '@assets/animals/flor.png';
 import flor_black from '@assets/animals/flor_black.png';
 import fogueira from '@assets/animals/fogueira.png';
 import fogueira_black from '@assets/animals/fogueira_black.png';
+import foguete from '@assets/animals/foguete.png';
+import foguete_black from '@assets/animals/foguete_black.png';
 import folha from '@assets/animals/folha.png';
 import folha_black from '@assets/animals/folha_black.png';
+import galo from '@assets/animals/galo.png';
+import galo_black from '@assets/animals/galo_black.png';
 import gato from '@assets/animals/gato.png';
 import gato_black from '@assets/animals/gato_black.png';
 import girafa from '@assets/animals/girafa.png';
@@ -110,8 +114,10 @@ const animalMap : AnimalMap = {
     elefante, elefante_black,
     escova, escova_black,
     flor, flor_black,
+    foguete, foguete_black,
     fogueira, fogueira_black,
     folha, folha_black,
+    galo, galo_black,
     gato, gato_black,
     girafa, girafa_black,
     guardachuva, guardachuva_black,

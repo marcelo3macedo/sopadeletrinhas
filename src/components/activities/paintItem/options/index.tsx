@@ -11,6 +11,8 @@ const Options = ({ options, action }:any) => {
     action(item);
   }
 
+  if (!blocks) {return;}
+
   return (
     <Wrapper>
       { blocks.map((b:any, i:number) => (

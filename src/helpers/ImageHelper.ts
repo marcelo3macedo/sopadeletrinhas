@@ -9,6 +9,8 @@ function resizeImage({ originalWidth, originalHeight, newWidth }:any) {
 }
 
 function sliceIntoBlocks(arr:any, blockSize:number) {
+  if (!arr) {return;}
+
   return arr.reduce((result:any, _:any, index:number) => {
     if (index % blockSize === 0) {
       result.push(arr.slice(index, index + blockSize));

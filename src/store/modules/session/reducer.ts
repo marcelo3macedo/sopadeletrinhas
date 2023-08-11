@@ -1,40 +1,7 @@
-import { SESSIONTYPE_CORRECTANSWER, SESSIONTYPE_DRAGNDROP, SESSIONTYPE_PAINT } from '@constants/sessionTypes';
 import produce from 'immer';
 
 const INITIAL_STATE = {
-    session: [
-        {
-            type: SESSIONTYPE_DRAGNDROP,
-            word: 'Pato',
-            slug: 'pato',
-            syllables: [ 'PA', 'TO'],
-            options: [ 'CA', 'PA', 'SA', 'TO'],
-        },
-        {
-            type: SESSIONTYPE_PAINT,
-            word: 'ABELHA',
-            correctAnswer: 'Abelha',
-            slug: 'abelha',
-            options: [
-                { animal: 'pato' },
-                { animal: 'abelha' },
-                { animal: 'baleia' },
-                { animal: 'cachorro' },
-            ],
-        },
-        {
-            type: SESSIONTYPE_CORRECTANSWER,
-            syllable: 'BA',
-            correctAnswer: 'Baleia',
-            slug: 'baleia',
-            options: [
-                { value: 'pato', image: 'pato' },
-                { value: 'abelha', image: 'abelha' },
-                { value: 'baleia', image: 'baleia' },
-                { value: 'cachorro', image: 'cachorro' },
-            ],
-        },
-    ],
+    session: [],
     activeIndex: 0,
     difficulty: '',
     validated: false,
@@ -71,7 +38,7 @@ export default function session(state = INITIAL_STATE, action:any) {
             case '@session/ABORT': {
                 draft.validated = false;
                 draft.isCorrect = false;
-                draft.session = null as any;
+                draft.session = [];
                 draft.correctAnswer = 0;
                 break;
             }

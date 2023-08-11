@@ -52,8 +52,8 @@ function getAnimalOptions(selected:any, origin:any, elements:number) {
     }]);
 }
 
-function getAnimalWithImageOptions(selected:any, origin:any, elements:number) {
-    const filteredData = origin.filter((item:any) => item.slug !== selected.slug);
+function getAnimalWithImageOptions(selected:any, origin:any, elements:number, syllable:string) {
+    const filteredData = origin.filter((item:any) => item.slug !== selected.slug && item.syllables[0] !== syllable);
     const animals = addRandomAnimals(filteredData, elements);
     const result = animals.map((x:any) => { return { value: x.slug, image: x.slug };});
 

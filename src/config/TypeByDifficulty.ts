@@ -70,6 +70,26 @@ const typesByDifficulty = [
                 slug: 'vaca',
                 syllables: [ 'VA', 'CA'],
             },
+            {
+                word: 'Caneta',
+                slug: 'caneta',
+                syllables: [ 'CA', 'NE', 'TA'],
+            },
+            {
+                word: 'Escova',
+                slug: 'escova',
+                syllables: [ 'ES', 'CO', 'VA'],
+            },
+            {
+                word: 'Girafa',
+                slug: 'girafa',
+                syllables: [ 'GI', 'RA', 'FA'],
+            },
+            {
+                word: 'Tucano',
+                slug: 'tucano',
+                syllables: [ 'TU', 'CA', 'NO'],
+            },
         ],
         possibleOptions: [ 'BA', 'BE', 'BI', 'BO', 'BU', 'CA', 'CE', 'CI', 'CO', 'DA', 'DE', 'DI', 'DO', 'DU', 'FA', 'FE', 'FI', 'FO', 'FU', 'TA', 'TE', 'TI', 'TO', 'TU', 'RA', 'RE', 'RI', 'RO', 'RU', 'SA', 'SE', 'SI', 'SO', 'SU'],
     },

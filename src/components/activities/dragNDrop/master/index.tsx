@@ -1,4 +1,3 @@
-import { ButtonSecondary } from '@components/elements/buttons/secondary';
 import { TitleText } from '@components/elements/texts/title';
 import { getImageFromSlug } from '@helpers/AnimalsHelper';
 import { Styles } from '@interfaces/texts/FontProps';
@@ -8,13 +7,15 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import Options from '../options';
 import WordArea from '../word';
-import { BackArea, Container, Header, Picture } from './styles';
+import { Container, Header, Picture } from './styles';
 
 const DragNDrop = ({ session }:any) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const [ selected, setSelected ] = useState([]) as any;
-  const { slug, syllables, options } = session;
+  const { slug, syllables, options } = session?.details;
+
+  if (!session) {return;}
 
   function selectedSyllable(value: string) {
     const syllable = syllables[selected.length];
@@ -27,15 +28,12 @@ const DragNDrop = ({ session }:any) => {
     if (newSelected.length < syllables.length) {return;}
 
     setTimeout(() => {
-      dispatch(selectOptionAction({ option: session.slug }));
+      dispatch(selectOptionAction({ option: session.details.slug }));
     }, 1500);
   }
 
   return (
     <Container>
-      <BackArea>
-        <ButtonSecondary title={t('actions.exit')} />
-      </BackArea>
       <Header>
         <TitleText value={t('dragNDrop.title')} styled={Styles.LargeCentered} />
       </Header>

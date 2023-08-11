@@ -15,7 +15,7 @@ export function ValidationActivies({ session, isCorrect }:any) {
   const message = isCorrect ?
     t('activities.congratsCorrect') :
     t('activities.wrongAnswer');
-  const { slug, correctAnswer, word } = session;
+  const { slug, correctAnswer, word } = session.details;
   const answer = correctAnswer ?? word;
 
   return (

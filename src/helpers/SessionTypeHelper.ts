@@ -20,8 +20,8 @@ function getType(configs: any) {
 
 function getTypeOptions(type:string, configs:any, selected: any) {
     if (type === SESSIONTYPE_DRAGNDROP) {
-        const alreadySelected = selected.filter((x: any) => x.type === SESSIONTYPE_DRAGNDROP).map((y:any) => y.details.slug);
-        const filteredData = configs.elements.filter((item:any) => !alreadySelected.includes(item.slug));
+        const alreadySelected = selected.filter((x: any) => x.type === SESSIONTYPE_DRAGNDROP).map((y:any) => y?.details?.slug);
+        const filteredData = configs.elements.filter((item:any) => !alreadySelected.includes(item?.slug));
         const target = filteredData.length === 0 ? configs.elements : filteredData;
 
         const pos = getRandomValue(target.length - 1);
@@ -38,8 +38,8 @@ function getTypeOptions(type:string, configs:any, selected: any) {
     }
 
     if (type === SESSIONTYPE_PAINT) {
-        const alreadySelected = selected.filter((x: any) => x.type === SESSIONTYPE_PAINT).map((y:any) => y.details.slug);
-        const filteredData = configs.elements.filter((item:any) => !alreadySelected.includes(item.slug));
+        const alreadySelected = selected.filter((x: any) => x.type === SESSIONTYPE_PAINT).map((y:any) => y?.details?.slug);
+        const filteredData = configs.elements.filter((item:any) => !alreadySelected.includes(item?.slug));
         const target = filteredData.length === 0 ? configs.elements : filteredData;
 
         const pos = getRandomValue(target.length - 1);
@@ -55,19 +55,21 @@ function getTypeOptions(type:string, configs:any, selected: any) {
     }
 
     if (type === SESSIONTYPE_CORRECTANSWER) {
-        const alreadySelected = selected.filter((x: any) => x.type === SESSIONTYPE_PAINT).map((y:any) => y.details.slug);
-        const filteredData = configs.elements.filter((item:any) => !alreadySelected.includes(item.slug));
+        const alreadySelected = selected.filter((x: any) => x.type === SESSIONTYPE_CORRECTANSWER).map((y:any) => y?.details?.slug);
+        const filteredData = configs.elements.filter((item:any) => !alreadySelected.includes(item?.slug));
         const target = filteredData.length === 0 ? configs.elements : filteredData;
 
         const pos = getRandomValue(target.length - 1);
-        const { word, slug } = target[pos];
-        const options = getAnimalWithImageOptions(target[pos], configs.elements, 3);
+        const { word, slug, syllables } = target[pos];
+        const syllable = syllables[0];
+        const options = getAnimalWithImageOptions(target[pos], configs.elements, 3, syllable);
 
         return {
             word,
             slug,
             correctAnswer: word,
             options,
+            syllable,
         };
 
     }

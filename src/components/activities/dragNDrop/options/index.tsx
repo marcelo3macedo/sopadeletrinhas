@@ -6,6 +6,8 @@ import Draggable from 'react-native-draggable';
 import { Item, Row, Syllable, Wrapper } from './styles';
 
 const Options = ({ options, action }:any) => {
+  if (!options) {return;}
+
   const minDrag = -50;
   const blockSize = options.length > 4 ? 3 : 2;
   const blocks = sliceIntoBlocks(options, blockSize);

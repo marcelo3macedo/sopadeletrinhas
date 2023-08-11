@@ -1,4 +1,3 @@
-import { ButtonSecondary } from '@components/elements/buttons/secondary';
 import { TitleText } from '@components/elements/texts/title';
 import { Styles } from '@interfaces/texts/FontProps';
 import { selectOptionAction } from '@store/modules/session/actions';
@@ -6,13 +5,13 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import Options from '../options';
-import { BackArea, Container, Header, WordArea } from './styles';
+import { Container, Header, WordArea } from './styles';
 
 const PaintItem = ({ session }:any) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const [ selected, setSelected ] = useState(false);
-  const { options, word } = session;
+  const { options, word } = session?.details;
 
   function optionSelected(value:string) {
     if (selected) {return;}
@@ -26,9 +25,6 @@ const PaintItem = ({ session }:any) => {
 
   return (
     <Container>
-      <BackArea>
-        <ButtonSecondary title={t('actions.exit')} />
-      </BackArea>
       <Header>
         <TitleText value={t('paintItem.choose')} styled={Styles.LargeCentered} />
       </Header>

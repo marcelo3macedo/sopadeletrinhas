@@ -8,13 +8,15 @@ import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Modal } from 'react-native-paper';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Styles } from '@interfaces/texts/FontProps';
+import { createAction } from '@store/modules/session/actions';
 import { style } from './styles';
 
 export function DifficultyModal({ modal, dismissAction }:any) {
     const { t } = useTranslation();
+    const dispatch = useDispatch();
     const { options } = useSelector((state:RootState) => state.difficulties);
 
     if (!options) {return <></>;}
@@ -23,7 +25,8 @@ export function DifficultyModal({ modal, dismissAction }:any) {
         return t(`difficulty.${name}`);
     }
 
-    function selectOptionHandler() {
+    function selectOptionHandler(difficulty:string) {
+        dispatch(createAction({ difficulty }));
         dismissAction();
     }
 

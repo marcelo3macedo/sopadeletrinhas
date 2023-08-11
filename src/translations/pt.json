@@ -39,18 +39,60 @@
             "fontSize": "Tamanho da Fonte"
         },
         "correctOption": {
-            "choose": "Escolha o animal que começa com:"
+            "choose": "Escolha a palavra que começa com:"
         },
         "paintItem": {
-            "choose": "Pinte o seguinte animal:"
+            "choose": "Pinte o elemento que se refere á:"
         },
         "activities": {
+            "questionNumber": "Pergunta",
+            "questionOf": "de",
             "congratsCorrect": "Você acertou! Parabéns!",
             "wrongAnswer": "Que pena, você errou essa pergunta.",
-            "rightAnswer": "Resposta correta:"
+            "rightAnswer": "Resposta correta:",
+            "animals": {
+                "lock": "Bloqueado",
+                "cat": "gatos",
+                "cow": "vacas",
+                "dog": "cachorros",
+                "elephant": "elefantes",
+                "panda": "pandas",
+                "pig": "porcos",
+                "pigeon": "pombos",
+                "rabbit": "coelhos",
+                "sloth": "bicho-preguiça",
+                "tiger": "tigres",
+                "toucan": "tucanos",
+                "whale": "baleias"
+            },
+            "singleAnimals": {
+                "cat": "gato",
+                "cow": "vaca",
+                "dog": "cachorro",
+                "elephant": "elefante",
+                "panda": "panda",
+                "pig": "porco",
+                "pigeon": "pombo",
+                "rabbit": "coelho",
+                "sloth": "bicho-preguiça",
+                "tiger": "tigre",
+                "toucan": "tucano",
+                "whale": "baleia"
+            }
         },
         "dragNDrop": {
             "title": "Forme a palavra que corresponde a:"
+        },
+        "session": {
+            "failed": {
+                "title": "Sua sessão foi finalizada.",
+                "message": "Você acertou X%. Infelizmente nenhum animal foi liberado.",
+                "tryAgain": "Tente novamente"
+            },
+            "success": {
+                "title": "Você conseguiu, Parabéns! Um {animal} foi liberado para a natureza",
+                "back": "Voltar para Home"
+            }
         }
     }
 }

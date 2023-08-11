@@ -10,11 +10,11 @@ export function ItemScratch({ originImage, destinyImage, action = null }:any) {
   function handleScratch(scratchPercentage: number) {
       if (scratchPercentage > 30) {
           //action();
-      }        
+      }
   }
 
   const { width: originalWidth, height: originalHeight } = Image.resolveAssetSource(originImage);
-  const { width, height } = resizeImage({ originalWidth, originalHeight, newWidth  })
+  const { width, height } = resizeImage({ originalWidth, originalHeight, newWidth  });
   return (
       <Container>
         <Picture source={destinyImage} width={width} height={height} />

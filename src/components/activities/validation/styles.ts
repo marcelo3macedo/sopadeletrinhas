@@ -25,7 +25,6 @@ export const Picture = styled.Image`
 `;
 
 export const Header = styled.View`
-  padding-top: 40px;
 `;
 
 export const Content = styled.View`

@@ -12,7 +12,7 @@ function isCorrectAnswer(session:any, index:number, option:string) {
     if (!session || session.length < index) {return false;}
 
     const activeSession = session[index];
-    const { slug } = activeSession;
+    const { slug } = activeSession.details;
 
     if (slug !== option) {return false;}
 
@@ -40,8 +40,13 @@ function getConfig(difficulty:string) {
     return typesByDifficulty.find(t => t.difficulty === difficulty);
 }
 
+function isSuccessedSession(total: number, correct: number) {
+    return (correct / total) > 0.7;
+}
+
 export {
     generateNewSession,
-    isCorrectAnswer
+    isCorrectAnswer,
+    isSuccessedSession
 };
 

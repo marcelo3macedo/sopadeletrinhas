@@ -5,23 +5,41 @@ import { ValidationActivies } from '@components/activities/validation';
 import { ButtonSecondary } from '@components/elements/buttons/secondary';
 import { TitleText } from '@components/elements/texts/title';
 import { SESSIONTYPE_CORRECTANSWER, SESSIONTYPE_DRAGNDROP, SESSIONTYPE_PAINT } from '@constants/sessionTypes';
+import { backgroundSound } from '@helpers/SoundHelper';
 import { RouteOptions } from '@interfaces/routes/RoutesOptions';
 import { Styles } from '@interfaces/texts/FontProps';
+import { useNavigation } from '@react-navigation/native';
 import { PATH_HOME } from '@services/navigation';
 import { navigate } from '@services/navigation/root';
 import { RootState } from '@store/modules/rootReducer';
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { BackArea, Breadcrumb, Container } from './styles';
 
 export function Review() {
+    const [ sound, setSound ] = useState(null) as any;
     const { session, activeIndex, validated, isCorrect }:any = useSelector((state:RootState) => state.session);
     const activeSession = session[activeIndex];
     const { t } = useTranslation();
+    const navigation = useNavigation();
     const questionNumber = activeIndex ? activeIndex + 1 : 1;
     const questionTotal = session.length;
     const questionPosition = `${t('activities.questionNumber')} ${questionNumber} ${t('activities.questionOf')} ${questionTotal}`;
+
+    useEffect(() => {
+        if (!sound) {
+            setSound(backgroundSound());
+        }
+        const unsubscribe = navigation.addListener('blur', () => {
+            if (sound) {
+                sound.stop();
+                sound.release();
+            }
+        });
+
+        return unsubscribe;
+    }, [navigation, sound]);
 
     if (!activeSession) {return <></>;}
 

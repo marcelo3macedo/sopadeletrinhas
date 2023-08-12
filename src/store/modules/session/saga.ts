@@ -1,4 +1,5 @@
 import { generateNewSession, isCorrectAnswer, isSuccessedSession } from '@helpers/SessionHelper';
+import { selectOptionSound } from '@helpers/SoundHelper';
 import { RouteOptions } from '@interfaces/routes/RoutesOptions';
 import { PATH_ACTIVITY_FINISHED, PATH_HOME, PATH_REVIEW } from '@services/navigation';
 import { navigate } from '@services/navigation/root';
@@ -22,13 +23,14 @@ function* selectOption({ payload }:any) {
     const { session, activeIndex } = yield select(selectors.session);
 
     const isCorrect = isCorrectAnswer(session, activeIndex, option);
+    selectOptionSound(isCorrect, option);
     yield put(selectSuccessAction({ isCorrect }));
 }
 
 function* selectSuccess() {
     yield new Promise(resolve => setTimeout(() => {
         resolve(true);
-    }, 3000));
+    }, 5000));
     yield put(nextAction());
 }
 

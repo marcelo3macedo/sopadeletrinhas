@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   flex: 1;
+  background: #fff;
 `;
 
 export const Content = styled.View`
@@ -10,3 +11,7 @@ export const Content = styled.View`
   background: ${({ theme }) => theme.PALLETE01_COLOR};
 `;
 
+export const Child = styled.View`
+  padding: 10px;
+  flex: 1;
+`;

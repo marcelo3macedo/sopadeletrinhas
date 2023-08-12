@@ -4,7 +4,7 @@ import { StatusBar } from 'react-native';
 
 import { MenuHeader } from '@components/headers/Menu';
 import { useTheme } from 'styled-components';
-import { Container, Content } from './styles';
+import { Child, Container, Content } from './styles';
 
 export function MainTheme({ children }: PageWrapperProps) {
   const theme = useTheme();
@@ -17,7 +17,9 @@ export function MainTheme({ children }: PageWrapperProps) {
         />
         <Content>
           <MenuHeader />
-          {children}
+          <Child>
+            {children}
+          </Child>
         </Content>
     </Container>
   );

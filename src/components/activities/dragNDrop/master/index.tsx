@@ -1,5 +1,6 @@
 import { TitleText } from '@components/elements/texts/title';
 import { getImageFromSlug } from '@helpers/AnimalsHelper';
+import { selectOptionSound } from '@helpers/SoundHelper';
 import { Styles } from '@interfaces/texts/FontProps';
 import { selectOptionAction } from '@store/modules/session/actions';
 import React, { useState } from 'react';
@@ -20,7 +21,10 @@ const DragNDrop = ({ session }:any) => {
   function selectedSyllable(value: string) {
     const syllable = syllables[selected.length];
 
-    if (value !== syllable) {return;}
+    if (value !== syllable) {
+      selectOptionSound(false);
+      return;
+    }
 
     const newSelected = selected.concat(value);
     setSelected(newSelected);

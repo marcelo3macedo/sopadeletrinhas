@@ -17,6 +17,8 @@ export default function session(state = INITIAL_STATE, action:any) {
                 draft.difficulty = action.payload.difficulty;
                 draft.activeIndex = 0;
                 draft.correctAnswer = 0;
+                draft.validated = false;
+                draft.isCorrect = false;
                 break;
             }
             case '@session/CREATE_SUCCESS': {

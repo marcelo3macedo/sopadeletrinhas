@@ -1,3 +1,4 @@
+import { isTablet } from '@helpers/SizeHelper';
 import { styled } from 'styled-components/native';
 
 export const Wrapper = styled.View`
@@ -23,6 +24,12 @@ export const Item = styled.View`
   border-radius: 10px;
   width: 100px;
   height: 90px;
+
+  
+  ${isTablet() && `
+    width: 150px;
+    height: 130px;
+  `};
 `;
 
 export const Syllable = styled.View`

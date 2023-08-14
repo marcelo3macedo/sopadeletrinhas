@@ -5,7 +5,7 @@ const persistor = (reducers:any) => {
   const persistedReducer = persistReducer({
       key: 'app',
       storage: AsyncStorage,
-      whitelist: [ 'animals', 'session' ],
+      whitelist: [ 'animals', 'session', 'config' ],
   }, reducers);
 
   return persistedReducer;

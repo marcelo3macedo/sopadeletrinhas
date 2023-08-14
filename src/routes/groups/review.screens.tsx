@@ -12,8 +12,8 @@ export function ReviewScreens() {
     return (
         <ReviewTheme>
             <Navigator screenOptions={styles.drawerScreenOptions}>
-                <Screen name={PATH_REVIEW} component={Review} options={styles.screenOptions} />
-                <Screen name={PATH_ACTIVITY_FINISHED} component={ReviewFinishedScreen} options={styles.screenOptions} />
+                <Screen name={PATH_REVIEW} component={Review} options={styles.screenOptionsNoDrawer} />
+                <Screen name={PATH_ACTIVITY_FINISHED} component={ReviewFinishedScreen} options={styles.screenOptionsNoDrawer} />
             </Navigator>
         </ReviewTheme>
     );

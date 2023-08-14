@@ -32,7 +32,7 @@ export function Routes() {
       <Screen
         name={RouteOptions.activity}
         component={ReviewScreens}
-        options={styles.screenOptions}
+        options={styles.screenOptionsNoDrawer}
       />
     </Navigator>
   );

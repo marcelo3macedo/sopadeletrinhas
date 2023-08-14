@@ -1,3 +1,4 @@
+import { isTablet } from '@helpers/SizeHelper';
 import { StyleSheet } from 'react-native';
 import { styled } from 'styled-components/native';
 
@@ -17,4 +18,9 @@ export const style = StyleSheet.create({
 
 export const TextArea = styled.View`
     padding-top: 0px;
+
+    ${isTablet() &&
+        `
+        padding: 20px;
+    `}
 `;

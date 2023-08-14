@@ -1,10 +1,15 @@
-import { StyleSheet } from 'react-native';
+import { isTablet } from '@helpers/SizeHelper';
+import { styled } from 'styled-components/native';
 
-export const style = StyleSheet.create({
-    picture: {
-        display: 'flex',
-        resizeMode: 'contain',
-        width: 100,
-        height: 60,
-    },
-});
+export const Picture = styled.Image`
+    display: flex;
+    resize-mode: contain;
+    width: 100px;
+    height: 60px;
+
+    ${isTablet() &&
+        `
+        width: 150px;
+        height: 80px;
+    `}
+`;

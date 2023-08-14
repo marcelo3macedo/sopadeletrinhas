@@ -1,4 +1,5 @@
 import { FONTMODE_NORMAL } from '@constants/fontMode';
+import { isTablet } from '@helpers/SizeHelper';
 import { store } from '@store/index';
 import { theme as colorStyle } from '@styles/colors/default.style';
 import { theme as defaultStyle } from '@styles/default.style';
@@ -10,16 +11,17 @@ import { ThemeProvider } from 'styled-components/native';
 let fontSizeStore = (store.getState() as any).config.fontSize;
 
 export default function GlobalTheme({ children }:any) {
+    const getFontStyle = !isTablet() ? normalStyle : bigStyle;
     const [ theme, setTheme ] = useState({
         ...defaultStyle,
-        ...normalStyle,
+        ...getFontStyle,
         ...colorStyle,
     });
 
     function getTheme () {
         const state = store.getState() as any;
         const fontMode = state.config.fontSize;
-        const fontSize = fontMode === FONTMODE_NORMAL ? normalStyle : bigStyle;
+        const fontSize = fontMode === FONTMODE_NORMAL && !isTablet() ? normalStyle : bigStyle;
         const colors = colorStyle;
 
         return {

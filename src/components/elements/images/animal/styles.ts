@@ -1,3 +1,4 @@
+import { isTablet } from '@helpers/SizeHelper';
 import { styled } from 'styled-components/native';
 
 export const Wrapper = styled.View`
@@ -16,4 +17,11 @@ export const Picture = styled.Image`
     resizeMode: contain;
     width: 150px;
     height: 150px;
+
+    
+    ${isTablet() &&
+        `
+        width: 200px;
+        height: 200px;
+    `}
 `;

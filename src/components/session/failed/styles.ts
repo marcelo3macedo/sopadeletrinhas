@@ -1,3 +1,4 @@
+import { isTablet } from '@helpers/SizeHelper';
 import { StyleSheet } from 'react-native';
 
 export const style = StyleSheet.create({
@@ -22,6 +23,6 @@ export const style = StyleSheet.create({
     },
     animations: {
       aspectRatio: 1,
-      width: 140,
+      width: isTablet() ? 400 : 300,
     },
 });

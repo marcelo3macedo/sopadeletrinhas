@@ -1,3 +1,4 @@
+import { isTablet } from '@helpers/SizeHelper';
 import { styled } from 'styled-components/native';
 
 export const Container = styled.View`
@@ -26,4 +27,11 @@ export const Picture = styled.Image`
     align-items: center;
     justify-content: center;
     margin: 20px auto;
+
+    
+    ${isTablet() && `
+        width: 200px;
+        height: 200px;
+        margin: 40px auto;
+    `};
 `;

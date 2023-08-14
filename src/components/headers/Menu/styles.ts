@@ -1,3 +1,4 @@
+import { isTablet } from '@helpers/SizeHelper';
 import { styled } from 'styled-components/native';
 
 export const Container = styled.View`
@@ -7,6 +8,11 @@ export const Container = styled.View`
     align-items: center;
     justify-content: space-between;
     background: ${({ theme }) => theme.PALLETE02_COLOR};
+
+    ${isTablet() &&
+        `
+        padding: 20px 40px;
+    `}
 `;
 
 export const Header = styled.View`

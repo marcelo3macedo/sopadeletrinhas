@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 import { useDispatch } from 'react-redux';
 
+import { Styles } from '@interfaces/texts/FontProps';
 import { style } from './styles';
 
 export function FailedSession({ percentual }:any) {
@@ -28,7 +29,7 @@ export function FailedSession({ percentual }:any) {
                 loop
             />
             <View style={style.message}>
-                <TitleText value={message} />
+                <TitleText value={message} styled={Styles.HugeCentered} />
             </View>
             <ButtonPrimary title={t('session.failed.tryAgain')} action={tryAgainAction} />
         </View>

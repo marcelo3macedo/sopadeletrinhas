@@ -8,11 +8,11 @@ import { SESSIONTYPE_CORRECTANSWER, SESSIONTYPE_DRAGNDROP, SESSIONTYPE_PAINT } f
 import { backgroundSound } from '@helpers/SoundHelper';
 import { RouteOptions } from '@interfaces/routes/RoutesOptions';
 import { Styles } from '@interfaces/texts/FontProps';
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { PATH_HOME } from '@services/navigation';
 import { navigate } from '@services/navigation/root';
 import { RootState } from '@store/modules/rootReducer';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { BackArea, Breadcrumb, Container } from './styles';
@@ -27,19 +27,21 @@ export function Review() {
     const questionTotal = session.length;
     const questionPosition = `${t('activities.questionNumber')} ${questionNumber} ${t('activities.questionOf')} ${questionTotal}`;
 
-    useEffect(() => {
+    useFocusEffect(() => {
         if (!sound) {
             setSound(backgroundSound());
+        } else {
+            sound.play();
         }
+
         const unsubscribe = navigation.addListener('blur', () => {
             if (sound) {
                 sound.stop();
-                sound.release();
             }
         });
 
         return unsubscribe;
-    }, [navigation, sound]);
+    });
 
     if (!activeSession) {return <></>;}
 

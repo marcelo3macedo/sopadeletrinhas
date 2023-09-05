@@ -73,13 +73,13 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.sopadeletrinhas"
+    namespace "com.app.abcshow"
     defaultConfig {
-        applicationId "com.sopadeletrinhas"
+        applicationId "com.app.abcshow"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 100
+        versionName "1.0.0"
     }
     signingConfigs {
         debug {

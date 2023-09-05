@@ -20,18 +20,8 @@ function backgroundSound() {
     return execute('background.mp3', true, 0.3);
 }
 
-function selectOptionSound(isCorrect: boolean, option: string = '') {
-    const sound = isCorrect ? `${option}.mp3` : 'incorrect.mp3';
-
-    if (isCorrect) {
-        execute('correct.mp3');
-
-        setTimeout(() => {
-            execute(sound);
-        }, 1000);
-
-        return;
-    }
+function selectOptionSound(isCorrect: boolean) {
+    const sound = isCorrect ? 'correct.mp3' : 'incorrect.mp3';
 
     execute(sound, false, 0.5);
 }

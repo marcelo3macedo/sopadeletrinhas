@@ -23,7 +23,7 @@ function* selectOption({ payload }:any) {
     const { session, activeIndex } = yield select(selectors.session);
 
     const isCorrect = isCorrectAnswer(session, activeIndex, option);
-    selectOptionSound(isCorrect, option);
+    selectOptionSound(isCorrect);
     yield put(selectSuccessAction({ isCorrect }));
 }
 
